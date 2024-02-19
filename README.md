@@ -1,4 +1,44 @@
-# PROJECT OBJECTIVE:
-Build a ML model to perform focused digital marketing by predicting the potential customers who will convert from liability customers to asset customers.
-# CONTEXT:
-Bank XYZ has a growing customer base where majority of them are liability customers (depositors) vs borrowers (asset customers). The bank is interested in expanding the borrowers base rapidly to bring in more business via loan interests. A campaign that the bank ran in last quarter showed an average single digit conversion rate. In the last town hall, the marketing head mentioned that digital transformation being the core strength of the business strategy, how to devise effective campaigns with better target marketing to increase the conversion ratio to double digit with same budget as per last campaign. You as a data scientist asked to develop machine learning model to identify potential borrowers to support focused marketing.
+# Project Description
+
+## Business Objective
+MLOps is a means of continuous delivery and deployment of a machine learning model.  Practicing MLOps means that you advocate for automation and monitoring at all steps of ML system construction, including integration, testing, releasing, deployment, and infrastructure management. In this project, I will be deploying the machine learning application for the Build Classification Algorithms for Digital Transformation [Banking].I have generated the .sav file. This project uses Amazon EKS (cloud platform), Amazon EC2, Elastic Load Balancing, etc services. Amazon EKS is a fully managed service that makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS.
+ ## Aim
+Deploy a machine learning model to identify the potential borrower customers to support focused marketing and deploy them through a cloud provider (AWS)
+## Tech stack
+    Language - Python
+    Services - AWS EKS, ECR, Load balancer, code commit, code deploy, code pipeline
+## Prerequisites
+It is advisable to have a basic knowledge of the following services to get an understanding of the project.
+    Flask
+    Aws ECR
+    AWS ECS
+    AWS EC2 Load balancer
+    AWS Code commit
+    AWS Code Build
+    AWS Code Deploy
+    AWS Code Pipeline
+## Approach
+* Cluster creation steps
+        Create an EKS cluster master node.
+        Create Node groups in the EKS cluster
+        Create OIDC connection in the AWS Identity provider with EKS cluster
+        Install Kubernetes dashboard for monitoring
+        Install AWS Load balancer controller
+* Create an ECR repository for the docker image
+* EKS Yamls for our application
+        Create deployment yaml
+        create service yaml
+        create ingress yaml
+* Code Pipeline for EKS
+        Create 2 code commit repositories one for flask ml application and another one for EKS yamls
+        Create 2 code build projects one for flask ml application and another one for EKS yamls
+        Create 2 code pipelines one for flask ml application and another one for EKS yamls
+* In the EKS yaml code pipeline, have both ECR repo and code commit repo as the source
+* Push ML application into EKS
+        Create Flask application for our ML Application
+        Convert that Flask application into a docker Application
+        Test the docker application in your local
+        Push the Flask code to code commit, check the pipeline runs without any issues.
+        Once the Flask code pipeline ran successfully, check whether it triggers the second EKS yaml code pipeline.
+        If the second pipeline is triggered, check the API response for the update values.
+
