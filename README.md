@@ -1,7 +1,8 @@
 # Project Description
 
 ## Business Objective
-MLOps is a means of continuous delivery and deployment of a machine learning model.  Practicing MLOps means that you advocate for automation and monitoring at all steps of ML system construction, including integration, testing, releasing, deployment, and infrastructure management. In this project, I will be deploying the machine learning application for the Build Classification Algorithms for Digital Transformation [Banking].I have generated the .sav file. This project uses Amazon EKS (cloud platform), Amazon EC2, Elastic Load Balancing, etc services. Amazon EKS is a fully managed service that makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS.
+MLOps is a means of continuous delivery and deployment of a machine learning model.  Practicing MLOps means that you advocate for automation and monitoring at all steps of ML system construction, including integration, testing, releasing, deployment, and infrastructure management. In this Task, you will be deploying the machine learning application for the Build Classification Algorithms for Digital Transformation [Banking].We have generated the .sav file. This project uses Amazon EKS (cloud platform), Amazon EC2, Elastic Load Balancing, etc services. Amazon EKS is a fully managed service that makes it easy to deploy, manage, and scale containerized applications using Kubernetes on AWS.
+
  ## Aim
 Deploy a machine learning model to identify the potential borrower customers to support focused marketing and deploy them through a cloud provider (AWS)
 ## Tech stack
